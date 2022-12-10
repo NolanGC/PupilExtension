@@ -6,7 +6,9 @@ console.log("This prints to the console of the service worker (background script
 
 // Importing and using functionality from external files is also possible.
 importScripts('service-worker-utils.js')
-
+//import the youtube Iframe api
 // If you want to import a file that is deeper in the file hierarchy of your
 // extension, simply do `importScripts('path/to/file.js')`.
 // The path should be relative to the file `manifest.json`.
+
+// Detect if the user pauses the video

@@ -1,7 +1,6 @@
 {
-    // Comments are accepted in the manifest, even though it is JSON.
     "manifest_version": 3,
-    "name": "Chrome Extension v3 Starter",
+    "name": "Pupil AI assistant",
     "description": "A minimal example of a chrome extension using manifest v3",
     "version": "0.0.1",
     "icons": {
@@ -14,15 +13,19 @@
         "default_title": "Chrome Addon v3 Starter",
         "default_popup": "popup/popup.html"
     },
-    "permissions": [],
+    "permissions": ["activeTab"],
     "host_permissions": [
-        "*://*/*"
+        "<all_urls>"
     ],
     "background": {
         "service_worker": "service-worker.js"
     },
     "content_scripts": [{
-        "js": ["foreground.js"],
-        "matches": ["https://github.com/*"]
+        "js": ["youtube.js"],
+        "matches": ["https://www.youtube.com/*"]
+    }],
+    "web_accessible_resources": [{
+        "resources": ["script.js"],
+        "matches": ["https://www.youtube.com/*"]
     }]
 }
